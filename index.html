@@ -1,294 +1,449 @@
 <!DOCTYPE html>
 
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Artisanal Exchange | Precision Trading</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "secondary-fixed": "#ffdcc1",
-              "primary": "#e9c349",
-              "on-tertiary-fixed": "#231a08",
-              "surface-variant": "#3b3331",
-              "secondary": "#f9ba82",
-              "inverse-primary": "#735c00",
-              "surface": "#181210",
-              "primary-container": "#3b2d00",
-              "on-surface": "#ede0dc",
-              "inverse-surface": "#ede0dc",
-              "on-primary": "#3c2f00",
-              "primary-fixed-dim": "#e9c349",
-              "background": "#181210",
-              "tertiary": "#d5c5a8",
-              "surface-container-lowest": "#130d0b",
-              "error": "#ffb4ab",
-              "on-background": "#ede0dc",
-              "on-tertiary-container": "#a4957b",
-              "on-primary-container": "#b59319",
-              "primary-fixed": "#ffe088",
-              "on-tertiary": "#392f1b",
-              "on-surface-variant": "#d2c4bc",
-              "on-error": "#690005",
-              "tertiary-fixed": "#f2e0c3",
-              "outline": "#9b8e87",
-              "on-primary-fixed-variant": "#574500",
-              "surface-container-low": "#201a18",
-              "secondary-fixed-dim": "#f9ba82",
-              "on-secondary-fixed": "#2e1500",
-              "outline-variant": "#4f453f",
-              "on-tertiary-fixed-variant": "#504530",
-              "surface-container-highest": "#3b3331",
-              "on-error-container": "#ffdad6",
-              "surface-container": "#251e1c",
-              "secondary-container": "#683d0f",
-              "error-container": "#93000a",
-              "surface-bright": "#3f3835",
-              "surface-container-high": "#2f2826",
-              "tertiary-fixed-dim": "#d5c5a8",
-              "on-secondary-fixed-variant": "#683d0f",
-              "surface-dim": "#181210",
-              "surface-tint": "#e9c349",
-              "on-secondary-container": "#e6a872",
-              "on-primary-fixed": "#241a00",
-              "on-secondary": "#4c2700",
-              "inverse-on-surface": "#362f2c",
-              "tertiary-container": "#382e1a"
-            },
-            fontFamily: {
-              "headline": ["Manrope"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Chocotrade | Precision Trading</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "secondary-fixed": "#ffdcc1",
+            "primary": "#e9c349",
+            "on-tertiary-fixed": "#231a08",
+            "surface-variant": "#3b3331",
+            "secondary": "#f9ba82",
+            "inverse-primary": "#735c00",
+            "surface": "#181210",
+            "primary-container": "#3b2d00",
+            "on-surface": "#ede0dc",
+            "inverse-surface": "#ede0dc",
+            "on-primary": "#3c2f00",
+            "primary-fixed-dim": "#e9c349",
+            "background": "#181210",
+            "tertiary": "#d5c5a8",
+            "surface-container-lowest": "#130d0b",
+            "error": "#ffb4ab",
+            "on-background": "#ede0dc",
+            "on-tertiary-container": "#a4957b",
+            "on-primary-container": "#b59319",
+            "primary-fixed": "#ffe088",
+            "on-tertiary": "#392f1b",
+            "on-surface-variant": "#d2c4bc",
+            "on-error": "#690005",
+            "tertiary-fixed": "#f2e0c3",
+            "outline": "#9b8e87",
+            "on-primary-fixed-variant": "#574500",
+            "surface-container-low": "#201a18",
+            "secondary-fixed-dim": "#f9ba82",
+            "on-secondary-fixed": "#2e1500",
+            "outline-variant": "#4f453f",
+            "on-tertiary-fixed-variant": "#504530",
+            "surface-container-highest": "#3b3331",
+            "on-error-container": "#ffdad6",
+            "surface-container": "#251e1c",
+            "secondary-container": "#683d0f",
+            "error-container": "#93000a",
+            "surface-bright": "#3f3835",
+            "surface-container-high": "#2f2826",
+            "tertiary-fixed-dim": "#d5c5a8",
+            "on-secondary-fixed-variant": "#683d0f",
+            "surface-dim": "#181210",
+            "surface-tint": "#e9c349",
+            "on-secondary-container": "#e6a872",
+            "on-primary-fixed": "#241a00",
+            "on-secondary": "#4c2700",
+            "inverse-on-surface": "#362f2c",
+            "tertiary-container": "#382e1a"
           },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
         },
-      }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      body {
-        background-color: #181210;
-        color: #ede0dc;
-        font-family: 'Inter', sans-serif;
-      }
-      .glass-card {
-        background: rgba(47, 40, 38, 0.8);
-        backdrop-filter: blur(20px);
-      }
-      .gold-gradient-text {
-        background: linear-gradient(to right, #e9c349, #b59319);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    </style>
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      background-color: #181210;
+      color: #ede0dc;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .glass-card {
+      background: rgba(47, 40, 38, 0.8);
+      backdrop-filter: blur(20px);
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(to right, #e9c349, #b59319);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const homePage = document.getElementById('home-page');
+    const featuresPage = document.getElementById('features-page');
+    const linkHome = document.getElementById('link-home');
+    const linkFeatures = document.getElementById('link-features');
+
+    // 切换到首页
+    linkHome.addEventListener('click', (e) => {
+        e.preventDefault();
+        homePage.classList.remove('hidden');
+        featuresPage.classList.add('hidden');
+        
+        // 更新导航样式
+        linkHome.classList.add('text-[#e9c349]', 'border-b-2', 'border-[#e9c349]');
+        linkHome.classList.remove('text-[#d5c5a8]');
+        linkFeatures.classList.remove('text-[#e9c349]', 'border-b-2', 'border-[#e9c349]');
+        linkFeatures.classList.add('text-[#d5c5a8]');
+        
+        window.scrollTo(0, 0);
+    });
+
+    // 切换到功能页
+    linkFeatures.addEventListener('click', (e) => {
+        e.preventDefault();
+        homePage.classList.add('hidden');
+        featuresPage.classList.remove('hidden');
+        
+        // 更新导航样式
+        linkFeatures.classList.add('text-[#e9c349]', 'border-b-2', 'border-[#e9c349]');
+        linkFeatures.classList.remove('text-[#d5c5a8]');
+        linkHome.classList.remove('text-[#e9c349]', 'border-b-2', 'border-[#e9c349]');
+        linkHome.classList.add('text-[#d5c5a8]');
+        
+        window.scrollTo(0, 0);
+    });
+});
+</script>
+
 <body class="selection:bg-primary/30">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#181210] shadow-2xl shadow-black/20 flex justify-between items-center h-20 px-8 max-w-full mx-auto">
-<div class="text-2xl font-bold tracking-tighter text-[#e9c349] font-['Manrope']">The Artisanal Exchange</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-['Manrope'] font-medium text-sm tracking-wide text-[#e9c349] border-b-2 border-[#e9c349] pb-1" href="#">Product</a>
-<a class="font-['Manrope'] font-medium text-sm tracking-wide text-[#d5c5a8] hover:text-[#e9c349] transition-colors duration-300" href="#">Features</a>
-<a class="font-['Manrope'] font-medium text-sm tracking-wide text-[#d5c5a8] hover:text-[#e9c349] transition-colors duration-300" href="#">Showcase</a>
-<a class="font-['Manrope'] font-medium text-sm tracking-wide text-[#d5c5a8] hover:text-[#e9c349] transition-colors duration-300" href="#">Contact</a>
-</div>
-<div class="flex gap-4 items-center">
-<button class="font-['Manrope'] font-medium text-sm tracking-wide text-[#d5c5a8] hover:text-white transition-colors">Login</button>
-<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-['Manrope'] font-bold text-sm tracking-wide hover:bg-[#b59319] transition-all active:scale-95">Get Started</button>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-<div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-30 mix-blend-luminosity" data-alt="Abstract cinematic view of golden particles flowing through a dark chocolate liquid environment with soft professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYlY4vjoStu7sYbUkthtoa90sCRivUwpZ1AuKIcu1fDsU6nwJuzNDzdvkcYY9H70gIax1Ae8SLa2IN59TIDs7O4P7fIn1Cxpb6lCJW3pQckILoQ5ZWXx-qQedwWw4-Qyb1XEeJywiNSFhkpado7769RT2CYUFKkG43qcVPhtPnvOzzx0883mpcGChQZMxGqc0hE179tCs33p6rE-YjDyN7WCNPh1gGXlIo9Ei0aPjXhdsyqEQvg3ahbJfa3CS0R-jm3JNn7GA6we_3"/>
-<div class="absolute inset-0 bg-gradient-to-b from-surface/60 via-surface to-surface"></div>
-</div>
-<div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
-<span class="inline-block mb-6 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-bold tracking-[0.2em] uppercase">The Velvet Vault</span>
-<h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1]">
-                Precision in Every Trade, <br/>
-<span class="gold-gradient-text">Artistry in Every Alpha</span>
-</h1>
-<p class="font-body text-tertiary text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-                Elevate your quantitative strategy with a platform forged at the intersection of high-fidelity engineering and bespoke design.
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-[#181210] shadow-2xl shadow-black/20 flex justify-between items-center h-20 px-8 max-w-full mx-auto">
+    <div class="text-2xl font-bold tracking-tighter text-[#e9c349] font-['Manrope']">Chocotrade</div>
+    <div class="hidden md:flex gap-8 items-center">
+      <a id="link-home" class="font-['Manrope'] font-medium text-sm tracking-wide text-[#e9c349] border-b-2 border-[#e9c349] pb-1"
+        href="#">Product</a>
+      <a id="link-features" class="font-['Manrope'] font-medium text-sm tracking-wide text-[#d5c5a8] hover:text-[#e9c349] transition-colors duration-300"
+        href="#">Features</a>
+      <a class="font-['Manrope'] font-medium text-sm tracking-wide text-[#d5c5a8] hover:text-[#e9c349] transition-colors duration-300"
+        href="#">Showcase</a>
+      <a class="font-['Manrope'] font-medium text-sm tracking-wide text-[#d5c5a8] hover:text-[#e9c349] transition-colors duration-300"
+        href="#">Contact</a>
+    </div>
+    <div class="flex gap-4 items-center">
+      <button
+        class="font-['Manrope'] font-medium text-sm tracking-wide text-[#d5c5a8] hover:text-white transition-colors">Login</button>
+      <button
+        class="bg-primary text-on-primary px-6 py-2 rounded-lg font-['Manrope'] font-bold text-sm tracking-wide hover:bg-[#b59319] transition-all active:scale-95">Get
+        Started</button>
+    </div>
+  </nav>
+
+  <div id="home-page">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <div class="absolute inset-0 z-0">
+        <img class="w-full h-full object-cover opacity-30 mix-blend-luminosity"
+          data-alt="Abstract cinematic view of golden particles flowing through a dark chocolate liquid environment with soft professional studio lighting"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYlY4vjoStu7sYbUkthtoa90sCRivUwpZ1AuKIcu1fDsU6nwJuzNDzdvkcYY9H70gIax1Ae8SLa2IN59TIDs7O4P7fIn1Cxpb6lCJW3pQckILoQ5ZWXx-qQedwWw4-Qyb1XEeJywiNSFhkpado7769RT2CYUFKkG43qcVPhtPnvOzzx0883mpcGChQZMxGqc0hE179tCs33p6rE-YjDyN7WCNPh1gGXlIo9Ei0aPjXhdsyqEQvg3ahbJfa3CS0R-jm3JNn7GA6we_3" />
+        <div class="absolute inset-0 bg-gradient-to-b from-surface/60 via-surface to-surface"></div>
+      </div>
+      <div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <span
+          class="inline-block mb-6 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-xs font-bold tracking-[0.2em] uppercase">The
+          Velvet Vault</span>
+        <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1]">
+          Precision in Every Trade, <br />
+          <span class="gold-gradient-text">Artistry in Every Alpha</span>
+        </h1>
+        <p class="font-body text-tertiary text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+          Elevate your quantitative strategy with a platform forged at the intersection of high-fidelity engineering and
+          bespoke design.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <button
+            class="bg-primary text-on-primary px-10 py-4 rounded-xl font-headline font-bold text-lg hover:shadow-[0_0_30px_rgba(233,195,73,0.3)] transition-all">
+            Explore the Vault
+          </button>
+          <button
+            class="bg-surface-container-high text-on-surface border border-outline-variant/30 px-10 py-4 rounded-xl font-headline font-bold text-lg hover:bg-surface-bright transition-all">
+            View Methodology
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Core Pillars -->
+    <section class="py-24 bg-surface px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div class="group p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors">
+            <div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-primary text-3xl">account_tree</span>
+            </div>
+            <h3 class="font-headline text-2xl font-bold mb-4">Infrastructure</h3>
+            <p class="text-on-surface-variant leading-relaxed">Built on a redundant, low-latency backbone designed for
+              99.999% uptime in high-frequency environments.</p>
+          </div>
+          <div
+            class="group p-8 rounded-2xl bg-surface-container-low border border-transparent hover:border-primary/10 transition-all">
+            <div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+            </div>
+            <h3 class="font-headline text-2xl font-bold mb-4">Analysis</h3>
+            <p class="text-on-surface-variant leading-relaxed">Turn raw market noise into actionable intelligence with our
+              proprietary signal-processing suite.</p>
+          </div>
+          <div class="group p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors">
+            <div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+              <span class="material-symbols-outlined text-primary text-3xl">security</span>
+            </div>
+            <h3 class="font-headline text-2xl font-bold mb-4">Strategy</h3>
+            <p class="text-on-surface-variant leading-relaxed">A sovereign execution environment that protects your
+              intellectual property while maximizing capital efficiency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Platform Showcase -->
+    <section class="py-32 bg-surface-container-low overflow-hidden">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex flex-col lg:flex-row gap-20 items-center">
+          <div class="lg:w-1/3">
+            <h2 class="font-headline text-4xl md:text-5xl font-bold mb-8 leading-tight">Master the <span
+                class="text-primary">Ecosystem</span></h2>
+            <div class="space-y-8">
+              <div class="flex gap-6 items-start">
+                <div
+                  class="mt-1 w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-primary text-xl"
+                    style="font-variation-settings: 'FILL' 1;">lan</span>
+                </div>
+                <div>
+                  <h4 class="font-headline text-xl font-bold mb-2">Dynamic Infrastructure</h4>
+                  <p class="text-on-surface-variant text-sm">Real-time health monitoring of global gateways and databases
+                    across distributed networks.</p>
+                </div>
+              </div>
+              <div class="flex gap-6 items-start opacity-60 hover:opacity-100 transition-opacity">
+                <div
+                  class="mt-1 w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-tertiary text-xl">history_toggle_off</span>
+                </div>
+                <div>
+                  <h4 class="font-headline text-xl font-bold mb-2">Advanced Backtesting</h4>
+                  <p class="text-on-surface-variant text-sm">High-fidelity simulation and automated parameter optimization
+                    using 10+ years of tick data.</p>
+                </div>
+              </div>
+              <div class="flex gap-6 items-start opacity-60 hover:opacity-100 transition-opacity">
+                <div
+                  class="mt-1 w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
+                  <span class="material-symbols-outlined text-tertiary text-xl">query_stats</span>
+                </div>
+                <div>
+                  <h4 class="font-headline text-xl font-bold mb-2">Deep Market Data</h4>
+                  <p class="text-on-surface-variant text-sm">Precise recording and inspection of tick-level order book
+                    data with nanosecond resolution.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-2/3 relative">
+            <div class="relative rounded-2xl overflow-hidden border border-outline-variant/20 shadow-2xl">
+              <img class="w-full"
+                data-alt="Professional dark-themed trading dashboard with complex golden financial charts, candlestick patterns, and technical data overlays"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF2YEbhAsPGTFjjrOP3n_zblqFEO0v1bvkhVA7kwvGySOq7TeT28o7D_oX8ixjYcCW5ad8nuDF0PPCGcv4HlpJUcANGO-yGQSOtl85QXXDj8F1lKU6tlzWpFccjjr9y7rC7hohiyyaV1WzSd-nV3IK86FsrVrEAb6cz4PeM2BIew1-EEWvK5cHpGAxN7_VmeVNJ-u5BYnmIz1MYeddHyVLOW3b6tSSWfDBnlql6BOOpakCZPpfiLv1b-wGASWoaozAu9zCZjk7RfHv" />
+              <div class="absolute inset-0 bg-gradient-to-tr from-surface/20 to-transparent"></div>
+            </div>
+            <!-- Floating Accent -->
+            <div
+              class="absolute -bottom-10 -left-10 glass-card p-6 rounded-xl border border-primary/10 max-w-xs shadow-2xl hidden md:block">
+              <div class="flex items-center gap-3 mb-4">
+                <div class="w-2 h-2 rounded-full bg-[#4ade80]"></div>
+                <span class="text-xs font-bold uppercase tracking-widest text-tertiary">Gateways Active</span>
+              </div>
+              <div class="text-2xl font-headline font-bold text-primary">0.042ms</div>
+              <div class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Average Execution Latency</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Backtest / Modal Feature -->
+    <section class="py-24 bg-surface">
+      <div class="max-w-7xl mx-auto px-8">
+        <div
+          class="bg-surface-container rounded-[2rem] p-12 lg:p-20 relative overflow-hidden flex flex-col md:flex-row items-center gap-16">
+          <div class="relative z-10 md:w-1/2">
+            <h2 class="font-headline text-4xl font-bold mb-6">Surgical <span class="gold-gradient-text">Precision</span>
+              Configuration</h2>
+            <p class="text-tertiary text-lg mb-8 leading-relaxed">
+              Our backtest configuration suite allows you to model slippage, market impact, and complex fee structures
+              with microscopic detail. No more surprises when going live.
             </p>
-<div class="flex flex-col sm:flex-row gap-6 justify-center">
-<button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-headline font-bold text-lg hover:shadow-[0_0_30px_rgba(233,195,73,0.3)] transition-all">
-                    Explore the Vault
-                </button>
-<button class="bg-surface-container-high text-on-surface border border-outline-variant/30 px-10 py-4 rounded-xl font-headline font-bold text-lg hover:bg-surface-bright transition-all">
-                    View Methodology
-                </button>
-</div>
-</div>
-</section>
-<!-- Core Pillars -->
-<section class="py-24 bg-surface px-8">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<div class="group p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors">
-<div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-primary text-3xl">account_tree</span>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-4">Infrastructure</h3>
-<p class="text-on-surface-variant leading-relaxed">Built on a redundant, low-latency backbone designed for 99.999% uptime in high-frequency environments.</p>
-</div>
-<div class="group p-8 rounded-2xl bg-surface-container-low border border-transparent hover:border-primary/10 transition-all">
-<div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-primary text-3xl">analytics</span>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-4">Analysis</h3>
-<p class="text-on-surface-variant leading-relaxed">Turn raw market noise into actionable intelligence with our proprietary signal-processing suite.</p>
-</div>
-<div class="group p-8 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors">
-<div class="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-primary text-3xl">security</span>
-</div>
-<h3 class="font-headline text-2xl font-bold mb-4">Strategy</h3>
-<p class="text-on-surface-variant leading-relaxed">A sovereign execution environment that protects your intellectual property while maximizing capital efficiency.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Platform Showcase -->
-<section class="py-32 bg-surface-container-low overflow-hidden">
-<div class="max-w-7xl mx-auto px-8">
-<div class="flex flex-col lg:flex-row gap-20 items-center">
-<div class="lg:w-1/3">
-<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8 leading-tight">Master the <span class="text-primary">Ecosystem</span></h2>
-<div class="space-y-8">
-<div class="flex gap-6 items-start">
-<div class="mt-1 w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">lan</span>
-</div>
-<div>
-<h4 class="font-headline text-xl font-bold mb-2">Dynamic Infrastructure</h4>
-<p class="text-on-surface-variant text-sm">Real-time health monitoring of global gateways and databases across distributed networks.</p>
-</div>
-</div>
-<div class="flex gap-6 items-start opacity-60 hover:opacity-100 transition-opacity">
-<div class="mt-1 w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-tertiary text-xl">history_toggle_off</span>
-</div>
-<div>
-<h4 class="font-headline text-xl font-bold mb-2">Advanced Backtesting</h4>
-<p class="text-on-surface-variant text-sm">High-fidelity simulation and automated parameter optimization using 10+ years of tick data.</p>
-</div>
-</div>
-<div class="flex gap-6 items-start opacity-60 hover:opacity-100 transition-opacity">
-<div class="mt-1 w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-tertiary text-xl">query_stats</span>
-</div>
-<div>
-<h4 class="font-headline text-xl font-bold mb-2">Deep Market Data</h4>
-<p class="text-on-surface-variant text-sm">Precise recording and inspection of tick-level order book data with nanosecond resolution.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="lg:w-2/3 relative">
-<div class="relative rounded-2xl overflow-hidden border border-outline-variant/20 shadow-2xl">
-<img class="w-full" data-alt="Professional dark-themed trading dashboard with complex golden financial charts, candlestick patterns, and technical data overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF2YEbhAsPGTFjjrOP3n_zblqFEO0v1bvkhVA7kwvGySOq7TeT28o7D_oX8ixjYcCW5ad8nuDF0PPCGcv4HlpJUcANGO-yGQSOtl85QXXDj8F1lKU6tlzWpFccjjr9y7rC7hohiyyaV1WzSd-nV3IK86FsrVrEAb6cz4PeM2BIew1-EEWvK5cHpGAxN7_VmeVNJ-u5BYnmIz1MYeddHyVLOW3b6tSSWfDBnlql6BOOpakCZPpfiLv1b-wGASWoaozAu9zCZjk7RfHv"/>
-<div class="absolute inset-0 bg-gradient-to-tr from-surface/20 to-transparent"></div>
-</div>
-<!-- Floating Accent -->
-<div class="absolute -bottom-10 -left-10 glass-card p-6 rounded-xl border border-primary/10 max-w-xs shadow-2xl hidden md:block">
-<div class="flex items-center gap-3 mb-4">
-<div class="w-2 h-2 rounded-full bg-[#4ade80]"></div>
-<span class="text-xs font-bold uppercase tracking-widest text-tertiary">Gateways Active</span>
-</div>
-<div class="text-2xl font-headline font-bold text-primary">0.042ms</div>
-<div class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Average Execution Latency</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Backtest / Modal Feature -->
-<section class="py-24 bg-surface">
-<div class="max-w-7xl mx-auto px-8">
-<div class="bg-surface-container rounded-[2rem] p-12 lg:p-20 relative overflow-hidden flex flex-col md:flex-row items-center gap-16">
-<div class="relative z-10 md:w-1/2">
-<h2 class="font-headline text-4xl font-bold mb-6">Surgical <span class="gold-gradient-text">Precision</span> Configuration</h2>
-<p class="text-tertiary text-lg mb-8 leading-relaxed">
-                        Our backtest configuration suite allows you to model slippage, market impact, and complex fee structures with microscopic detail. No more surprises when going live.
-                    </p>
-<ul class="space-y-4 mb-10">
-<li class="flex items-center gap-3 text-sm font-medium">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-                            Monte Carlo Simulations
-                        </li>
-<li class="flex items-center gap-3 text-sm font-medium">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-                            Custom Fee &amp; Slippage Profiles
-                        </li>
-<li class="flex items-center gap-3 text-sm font-medium">
-<span class="material-symbols-outlined text-primary text-lg">check_circle</span>
-                            Multi-Asset Correlation Models
-                        </li>
-</ul>
-<button class="text-primary font-headline font-bold flex items-center gap-2 group">
-                        Explore Configuration 
-                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
-</button>
-</div>
-<div class="md:w-1/2 relative">
-<!-- Visual representation of the modal/config -->
-<div class="bg-surface-container-highest p-1 rounded-xl shadow-2xl border border-outline-variant/20 transform rotate-2">
-<img class="rounded-lg" data-alt="Modern UI component showing a complex data input panel with gold sliders and cream colored labels on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB9tDkAGedN8H2qUCfCJlCk5VvuLE0yPhweK3-yBXzs8C-Ob-hsHLm8W3szshorNkBj8OU5EUbsp0TFVVzah4WFzbyf4pJWVcUV9ogigNEQ4YYpgHlGJU4A1Ob1dJW_kwfD4ozWJE9H6J4Wu2N1nxUL6xgQHDxjBthTkdXRuiyZ_5ufa3hwbGtlsk2t2VGQVeEqvVfUoGAijit4w74TvLQvyaLDTipTe7OoDaDZWperznXuhyQY5LNtcctAnHjOIvOznRAOfUJL_z-"/>
-</div>
-<div class="absolute -top-6 -right-6 bg-primary text-on-primary p-4 rounded-full shadow-lg animate-bounce duration-3000">
-<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">tune</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- CTA Section -->
-<section class="py-32 relative overflow-hidden">
-<div class="absolute inset-0 bg-[#251e1c]"></div>
-<div class="max-w-4xl mx-auto px-8 relative z-10 text-center">
-<h2 class="font-headline text-5xl md:text-6xl font-extrabold mb-8 tracking-tighter">Secure Your <span class="gold-gradient-text">Edge</span>.</h2>
-<p class="text-tertiary text-xl mb-12 opacity-80">Join the elite quant circle and transform your proprietary strategies into an institutional-grade powerhouse.</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<button class="bg-primary text-on-primary px-12 py-5 rounded-full font-headline font-black text-xl hover:scale-105 transition-transform">
-                    Request Invitation
-                </button>
-</div>
-<p class="mt-8 text-on-surface-variant text-sm font-label uppercase tracking-widest opacity-50">Limited availability for institutional partners</p>
-</div>
-</section>
-<!-- Footer -->
-<footer class="w-full border-t border-[#4f453f]/15 bg-[#181210] dark:bg-[#181210]">
-<div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 w-full max-w-7xl mx-auto">
-<div class="mb-8 md:mb-0">
-<div class="text-lg font-bold text-[#e9c349] mb-4">The Artisanal Exchange</div>
-<p class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] leading-loose max-w-xs text-center md:text-left">
-                    © 2024 The Artisanal Exchange. All rights reserved. Built for the modern quant.
-                </p>
-</div>
-<div class="flex flex-wrap justify-center gap-10">
-<div class="flex flex-col gap-3">
-<span class="text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-2">Legal</span>
-<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] hover:text-white transition-colors" href="#">Terms of Service</a>
-</div>
-<div class="flex flex-col gap-3">
-<span class="text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-2">Platform</span>
-<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] hover:text-white transition-colors" href="#">Security</a>
-<a class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] hover:text-white transition-colors" href="#">Status</a>
-</div>
-</div>
-</div>
-</footer>
-</body></html>
+            <ul class="space-y-4 mb-10">
+              <li class="flex items-center gap-3 text-sm font-medium">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Monte Carlo Simulations
+              </li>
+              <li class="flex items-center gap-3 text-sm font-medium">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Custom Fee &amp; Slippage Profiles
+              </li>
+              <li class="flex items-center gap-3 text-sm font-medium">
+                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                Multi-Asset Correlation Models
+              </li>
+            </ul>
+            <button class="text-primary font-headline font-bold flex items-center gap-2 group">
+              Explore Configuration
+              <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+            </button>
+          </div>
+          <div class="md:w-1/2 relative">
+            <!-- Visual representation of the modal/config -->
+            <div
+              class="bg-surface-container-highest p-1 rounded-xl shadow-2xl border border-outline-variant/20 transform rotate-2">
+              <img class="rounded-lg"
+                data-alt="Modern UI component showing a complex data input panel with gold sliders and cream colored labels on a dark background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB9tDkAGedN8H2qUCfCJlCk5VvuLE0yPhweK3-yBXzs8C-Ob-hsHLm8W3szshorNkBj8OU5EUbsp0TFVVzah4WFzbyf4pJWVcUV9ogigNEQ4YYpgHlGJU4A1Ob1dJW_kwfD4ozWJE9H6J4Wu2N1nxUL6xgQHDxjBthTkdXRuiyZ_5ufa3hwbGtlsk2t2VGQVeEqvVfUoGAijit4w74TvLQvyaLDTipTe7OoDaDZWperznXuhyQY5LNtcctAnHjOIvOznRAOfUJL_z-" />
+            </div>
+            <div
+              class="absolute -top-6 -right-6 bg-primary text-on-primary p-4 rounded-full shadow-lg animate-bounce duration-3000">
+              <span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">tune</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-32 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[#251e1c]"></div>
+      <div class="max-w-4xl mx-auto px-8 relative z-10 text-center">
+        <h2 class="font-headline text-5xl md:text-6xl font-extrabold mb-8 tracking-tighter">Secure Your <span
+            class="gold-gradient-text">Edge</span>.</h2>
+        <p class="text-tertiary text-xl mb-12 opacity-80">Join the elite quant circle and transform your proprietary
+          strategies into an institutional-grade powerhouse.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button
+            class="bg-primary text-on-primary px-12 py-5 rounded-full font-headline font-black text-xl hover:scale-105 transition-transform">
+            Request Invitation
+          </button>
+        </div>
+        <p class="mt-8 text-on-surface-variant text-sm font-label uppercase tracking-widest opacity-50">Limited
+          availability for institutional partners</p>
+      </div>
+    </section>
+  </div>
+
+  <div id="features-page" class="hidden pt-32 min-h-screen bg-surface">
+      <div class="max-w-7xl mx-auto px-8 pb-24">
+          <div class="text-center mb-16">
+              <h2 class="font-headline text-4xl md:text-6xl font-bold mb-6">Advanced <span class="gold-gradient-text">Features</span></h2>
+              <p class="text-tertiary text-lg max-w-2xl mx-auto">Explore our high-fidelity tools designed for the next generation of quantitative trading.</p>
+          </div>
+
+          <!-- 照片展示网格 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="group relative rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container">
+                  <img src="src/dashboard.png" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                  <div class="p-6">
+                      <h4 class="font-headline text-xl font-bold text-primary mb-2">Infrastructure Sentinel</h4>
+                      <p class="text-on-surface-variant text-sm">Monitor the pulse of your global trading network. Real-time health tracking for gateways and distributed infrastructure nodes.</p>
+                  </div>
+              </div>
+
+              <div class="group relative rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container">
+                  <img src="src/plugins.png" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                  <div class="p-6">
+                      <h4 class="font-headline text-xl font-bold text-primary mb-2">Connectivity Vault</h4>
+                      <p class="text-on-surface-variant text-sm">Expand your system with institutional-grade plugins. Hot-swap databases, data sources, and exchange interfaces seamlessly.</p>
+                  </div>
+              </div>
+
+              <div class="group relative rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container">
+                  <img src="src/backtest.png" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                  <div class="p-6">
+                      <h4 class="font-headline text-xl font-bold text-primary mb-2">High-Fidelity Forge</h4>
+                      <p class="text-on-surface-variant text-sm">Forge strategies with surgical accuracy. High-fidelity simulations modeling real-world slippage and market impact on tick-level data.</p>
+                  </div>
+              </div>
+
+              <div class="group relative rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container">
+                  <img src="src/market_data.png" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                  <div class="p-6">
+                      <h4 class="font-headline text-xl font-bold text-primary mb-2">Chronicle Engine</h4>
+                      <p class="text-on-surface-variant text-sm">Your ultimate archive for market history. Automate tick-level recording and manage massive datasets with seamless storage transitions.</p>
+                  </div>
+              </div>
+
+              <div class="group relative rounded-2xl overflow-hidden border border-outline-variant/30 bg-surface-container">
+                  <img src="src/research.png" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                  <div class="p-6">
+                      <h4 class="font-headline text-xl font-bold text-primary mb-2">Intelligence Terminal</h4>
+                      <p class="text-on-surface-variant text-sm">Where AI meets quantitative reasoning. An immersive terminal for LLM-powered code generation and advanced strategy research.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w-full border-t border-[#4f453f]/15 bg-[#181210] dark:bg-[#181210]">
+    <div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 w-full max-w-7xl mx-auto">
+      <div class="mb-8 md:mb-0">
+        <div class="text-lg font-bold text-[#e9c349] mb-4">Chocotrade</div>
+        <p
+          class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] leading-loose max-w-xs text-center md:text-left">
+          © 2026 Chocotrade. All rights reserved. Built for the modern quant.
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-10">
+        <div class="flex flex-col gap-3">
+          <span class="text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-2">Legal</span>
+          <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] hover:text-white transition-colors"
+            href="#">Privacy Policy</a>
+          <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] hover:text-white transition-colors"
+            href="#">Terms of Service</a>
+        </div>
+        <div class="flex flex-col gap-3">
+          <span class="text-primary text-[10px] font-bold uppercase tracking-[0.2em] mb-2">Platform</span>
+          <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] hover:text-white transition-colors"
+            href="#">Security</a>
+          <a class="font-['Inter'] text-xs uppercase tracking-widest text-[#d5c5a8] hover:text-white transition-colors"
+            href="#">Status</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
